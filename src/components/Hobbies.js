@@ -12,13 +12,11 @@ class Hobbies extends React.Component {
             const title = item.querySelector('.hobbies-theme-accordion-title');
 
             title.addEventListener('click', () => {
-                // Закрити інші елементи, крім поточного
                 accordionItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
-                // Перемкнути поточний елемент
                 item.classList.toggle('active');
             });
         });
